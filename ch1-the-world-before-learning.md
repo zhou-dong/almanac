@@ -2,6 +2,10 @@
 
 *This file holds facts specific to this chapter.*
 
+## Overview
+
+This chapter leaves the vent's stillness behind for a cell that swims and decides. This organism moves by "run and tumble" — its flagella bundle into a smooth propeller (run) or fling apart into a random reorientation (tumble), switching between the two based on a single internal chemical signal. Receptors packed together at one pole of the cell sense attractants and repellents, feeding a shared signaling pool that acts like a weighted sum: attractant lowers the signal, repellent raises it, and every receptor's influence depends on how many copies of it there are. When that pooled signal crosses a threshold, the motor snaps from mostly-running to mostly-tumbling — a switch, not a dial. Layered on top is a slower adaptation mechanism: methyl marks on the receptors drift over seconds to re-zero the signal back toward baseline, giving the cell a short chemical memory of its own recent stimulus — but one blind to whether tumbling or running actually helped. This is the story's first appearance of sensing-at-a-distance and a real decision loop, but it is still not learning: the adaptation always resets toward the cell's own history, never toward an outcome.
+
 ## Chemotaxis signaling — evolutionary origin
 
 - The core Che signaling module (CheA/CheY/CheB-style two-component architecture) is **broadly conserved across Bacteria and Archaea**, suggesting an ancient origin for chemotactic *signaling* logic specifically. (established, per comparative genomics reviews)
