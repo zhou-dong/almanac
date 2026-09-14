@@ -41,6 +41,25 @@ This chapter opens in the ocean's darkness, sometime between the late Hadean and
 - Sugars were plausibly present in the early ocean in **low concentration**, from abiotic synthesis (e.g. formaldehyde chemistry) and/or meteoritic delivery (confirmed in situ on asteroid Bennu samples: ribose, glucose, and other sugars). (established presence is plausible; concentration and bioavailability in open seawater specifically is doubtful — sugars are chemically fragile and don't concentrate well outside localized settings)
 - The reaction is local and surface-based — chemistry contacting the organism's surface directly, with no evidence for or need of any internal signal propagation across the organism at this stage. (speculative — this is a narrative simplification for pedagogical purposes, not a specific claim about a documented biochemical pathway)
 
+## Math model
+
+- This organism's behavior is modeled mathematically as **dissolved-substrate Michaelis–Menten kinetics**, simplified to `output ≈ input / (constant + input)`. The real formula is `rate = Vmax·[S] / (Km + [S])` — [S] is the local concentration of a dissolved electron donor (H₂, H₂S, Fe²⁺) at the cell surface, Vmax is the reaction's ceiling rate, and Km is the concentration at which the reaction runs at half that ceiling. The simplified version drops Vmax and Km as named, separately-justified constants and folds them into one generic "constant" — the chapter doesn't need their specific enzymatic meaning, only the general shape they produce (rises, then flattens). This is chosen over a plain proportional model (`output ≈ rate·input`) because the organism has a finite number of enzyme copies — each one takes time to bind, process, and release a molecule before grabbing the next, so past some input level, adding more substrate stops increasing output. The proportional model has no such ceiling and quietly ignores that limit. The two curves compared:
+
+  ```
+  output ≈ rate·input (no ceiling)          output ≈ input / (constant + input) (saturates)
+    |                              .           |                  . . . . . . . .   ← ceiling
+    |                          .                |              .
+    |                      .                    |           .
+    |                  .                        |         .
+    |              .                            |        .
+    |          .                                |      .
+    |      .                                    |    .
+    |  .                                        |  .
+    +---------------------------- input          +---------------------------- input
+  ```
+
+  One input, one saturating curve, straight to output — no summation, no threshold, no memory. This is deliberately the mathematical floor of the story: ch1 adds a weighted sum over multiple receptors plus a threshold switch, a genuine increase in structure over this single-curve behavior. (plausible pedagogical simplification — Michaelis–Menten is an established model for single-substrate enzyme kinetics in general, but is not documented specifically as a whole-cell description of a hypothetical LUCA-like organism's metabolism, which in reality involves a multi-enzyme pathway, not one isolated reaction)
+
 ## Open questions
 
 - No specific organism/species is being named or claimed as historically exact — this chapter portrays a plausible generic early chemolithoautotroph, not a documented specific lineage. Needs an explicit framing decision: state this generically, or pick a defensible modern analog (e.g. a vent-dwelling archaeon) to ground the visual.
