@@ -14,9 +14,11 @@ This chapter opens after the Cryogenian "Snowball Earth" glaciations, in the Edi
 - Atmospheric oxygen built up gradually over billions of years, produced by bacterial (cyanobacterial) photosynthesis, prior to the Ediacaran. (established)
 - The script's caption dates this chapter's opening to "600 million years ago, end of the Proterozoic." This is **imprecise**: the Proterozoic eon actually ends at ~538.8 Mya (its final period, the Ediacaran, runs roughly 635–538.8 Mya), so 600 Mya falls within the Ediacaran/late Proterozoic, not at its boundary. (established — dating correction; the ICS chronostratigraphic chart is the reference)
 
-## Early multicellularity — divergent lineages
+## Early multicellularity — one shared origin, then divergence
 
-- Multiple multicellular lineages arose independently (or via independent elaborations) from single-celled ancestors in this general era, including sponges, cnidarians ("radiatans" in the script — anchored, radially symmetric forms such as corals, sea anemones, and jellyfish), and bilaterians (animals with a front/back, left/right body axis). (established, at the level of "these lineages diverged and coexist," though exact branching order and timing among early animal lineages remains an active research area)
+- **Correction:** sponges, cnidarians, and bilaterians did **not** each independently invent multicellularity. Animal multicellularity is understood to have arisen **once**, from a single common multicellular ancestor at the base of Metazoa (all animals) — that lineage then split, with these three groups diverging from each other afterward, not climbing from single cells to multicellular bodies in parallel. (established — one shared origin for animal multicellularity; the exact branching *order*, e.g. whether sponges or ctenophores split off first, remains an active, unresolved debate)
+- Multicellularity as a broader phenomenon **has** evolved independently multiple times — but across separate kingdoms of life (animals, plants, fungi, and various algae each developed it separately), not among sponges/cnidarians/bilaterians specifically, which are one nested family tree. (established at this general level)
+- All animals, including sponges, cnidarians, and bilaterians, are **eukaryotes** — a domain of life plausibly arising later than, and from within, Archaea, via a symbiotic merger with a bacterium (the ancestor of mitochondria); see `ch0-first-thing-alive.md § Framing notes` for how this connects back to LUCA's Bacteria/Archaea fork. (plausible — a leading, well-supported model for eukaryotic origin, still refined in details, not a settled single account of every step)
 - Cnidarian descendants alive today include corals, sea anemones, and jellyfish. (established)
 
 ## *Ikaria wariootia* — the chapter's early bilaterian
@@ -65,6 +67,31 @@ This chapter opens after the Cryogenian "Snowball Earth" glaciations, in the Edi
 
 - *Ikaria*'s foraging (moving toward food, evidenced directly by its burrow traces) and any escape/withdrawal behavior are plausibly still **fixed reflex arcs** at this stage — the same fundamental mechanism as ch1's chemotaxis (a fixed weighted sum, thresholded into a motor output), just now converged through a (inferred) ganglion rather than driven by one cell's receptor cluster. The weights producing such behaviors would be set by development/gene expression, shaped by natural selection *across generations*, not adjusted by any individual organism's own experience within its lifetime. A behavior can look adaptive and goal-directed from the outside while still being entirely fixed on the inside — evolution did the "learning," not the individual. (plausible — consistent with reflex-circuit models of simple bilaterian behavior; not a claim that *Ikaria* specifically lacks any capacity for individual learning, just that none is needed to explain foraging/escape at this stage)
 - Genuine individual-lifetime learning about food and danger — associating a specific stimulus with an outcome and changing behavior because of it (classical/operant conditioning) — is documented in some invertebrates (e.g., Aplysia, various insects), but requires outcome-comparing machinery closer to ch3's error-driven perceptron rule (`ch3-when-weights-learn.md § The perceptron learning rule`) than to anything in this chapter. Attributing that capability to *Ikaria* specifically would be a stronger, less defensible claim than the fixed-reflex framing above. (plausible caution against overclaiming; the perceptron rule itself is established, per ch3)
+- **Eukaryotes arise from a merger of two LUCA-descended branches, not a straight chain through one domain.** The eukaryotic host cell itself (its core lineage, genetics, ribosomes) is understood to descend from *within* Archaea, closely related to a specific archaeal group (Asgard archaea) — not from Bacteria. Separately, at some point an archaeal host cell merged with a bacterium, which became the mitochondrion — a symbiotic partner living inside the eukaryotic cell, not the lineage the eukaryotic cell itself descends from. So the correct picture is `LUCA → Archaea (host lineage) → Eukaryotes`, with a bacterial lineage folded in afterward via endosymbiosis — not `LUCA → Bacteria → Eukaryotes`, and not a single linear chain through either domain alone. (plausible — a leading, well-supported model for eukaryotic origin, still refined in its specifics; see `ch0-first-thing-alive.md § Framing notes`)
+
+  ```
+  LUCA
+   ├── Bacteria ──────────────────────┐
+   │                                   (one bacterial lineage engulfed/merged in
+   │                                    → becomes the mitochondrion)
+   └── Archaea (host lineage) ──────── Eukaryotes
+  ```
+
+- **Branching order among animal lineages is a tree, not a ladder.** Sponges, cnidarians, and bilaterians are not sequential steps where one evolves into the next — each split leaves two sister lineages, only one of which keeps splitting further. The traditional (though actively disputed) view: the early animal ancestor's lineage split off sponges first, then the remaining lineage split off cnidarians, leaving bilaterians as the last-splitting group — meaning sponges and cnidarians are bilaterians' cousins, still alive today, not ancestors bilaterians "passed through." A competing hypothesis places ctenophores (comb jellies) as the first branch instead of sponges; this remains unresolved. (plausible — branching order specifically is an active, unresolved debate; the tree-not-ladder structure itself is established)
+
+  ```
+  Eukaryotes
+       │
+  early animal ancestor
+       │
+       ├── Sponges (branch off first — disputed; ctenophores are a competing "first branch")
+       │
+       └── (remaining lineage)
+              │
+              ├── Cnidarians (branch off next)
+              │
+              └── Bilaterians (last-splitting group)
+  ```
 - **Convergence and experience-based plasticity are independent capabilities, and plasticity is the older of the two.** A perceptron-style structure (this chapter's ganglion) is about *wiring* — gathering many inputs into one place before producing an output. Learning-from-experience is about a *single synapse* changing its own strength based on its own recent activity (e.g., habituation), which needs no convergence point at all: cnidarian nerve nets have no central ganglion anywhere, yet already show documented experience-based synaptic plasticity (`§ Cnidarian ("radiatan") nervous system`). So the historical order is plausibly the reverse of what the ganglion-as-perceptron framing might suggest — tunable, experience-modifiable synapses came first (pre-bilaterian), and centralization (this chapter's ganglion) arrived later, initially riding on fixed weights rather than introducing plasticity itself. (plausible — a structural inference from the cnidarian/bilaterian evidence already cited in this file, not a new documented fact)
 
 ## Open questions — sections needing a rewrite to match this file
